@@ -1,5 +1,4 @@
-//TODO import Camera from "./camera.js"
-import gameobject from "./gameobject";
+import Camera from "./camera.js"
 
 class Game
 {
@@ -13,7 +12,7 @@ class Game
         this.deltaTime = 0;
         this.resizeCanvas();
         window.addEventListener("resize", ()=> this.resizeCanvas());
-        //TODO this.camera = new Camera(null, this.canvas.width, this.canvas.height);
+        this.camera = new Camera(null, this.canvas.width, this.canvas.height);
     }
     resizeCanvas()
     {
@@ -31,7 +30,7 @@ class Game
         this.deltaTime = (currentFrameTime - this.lastFrameTime)/1000;
         this.lastFrameTime = currentFrameTime;
         this.update();
-        //TODO this.camera.update();
+        this.camera.update();
         this.draw();
         requestAnimationFrame((timestamp)=>this.gameLoop(timestamp));
     }
@@ -49,7 +48,7 @@ class Game
     {
         this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
         this.ctx.save();
-        //TODO this.ctx.translate(-camera.x, -this.camera.y);
+        this.ctx.translate(-this.camera.x, -this.camera.y);
 
         for(const gameObject of this.gameObjects)
         {
