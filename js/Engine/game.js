@@ -50,7 +50,7 @@ class Game
         this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
         this.ctx.save();
         //TODO this.ctx.translate(-camera.x, -this.camera.y);
-        
+
         for(const gameObject of this.gameObjects)
         {
             gameObject.draw();
@@ -70,6 +70,7 @@ class Game
 
     reset()
     {
+        //TODO need to add functionality for gameObjects to reset
         this.isRunning = false;
         for(const gameObject of this.gameObjects)
         {
