@@ -1,4 +1,4 @@
-import Component from "./component"
+import Component from "./component";
 
 class UI extends Component
 {
@@ -32,3 +32,4 @@ class UI extends Component
         this.text = newText;
     }
 }
+export default UI;
