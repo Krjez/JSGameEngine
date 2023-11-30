@@ -3,7 +3,7 @@ import Renderer from "../Engine/renderer";
 import Physics from "../Engine/physics";
 import Input from "../Engine/input";
 import {Images} from "../Engine/resources";
-//TODO import Enemy from "./enemy";
+import Enemy from "./enemy";
 import Platform from "./platform";
 import Collectible from "./collectible";
 import ParticleSystem from "../Engine/particlesystem";
